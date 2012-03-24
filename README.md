@@ -63,9 +63,12 @@ For pic18f2550 bootloader code starts at address 0x7C00 and continues till 0x7FB
 PC software
 -----------
 
-PC software is written in C# and works on Windows machines. It should work in Linux or OSX via Mono, but I have not checked it yet. Sorce code is inside src/loader directory.
+PC software is written in C# and works on Windows machines. It should work in Linux or OSX via Mono, but I have not checked it yet. Source code is inside src/loader directory.
 Usage:
-`loader.exe firmware_hex -p=port [-b=baudrate]
+
+```
+loader.exe firmware_hex -p=port [-b=baudrate]
     -p=port       Sets COM port used to flash firmware
-    -b=baudrate   Sets baud rate (default is 115200)`
-Loader requires HEX file as input. After you start it, it will be sending stream of 0x55 bytes to initiate auto-baud claculation and entry into bootloader mode. When bottloader starts you sloud press any key and PC loader will start sending instructions to microcontroller.
+    -b=baudrate   Sets baud rate (default is 115200)
+```
+Loader requires HEX file as input. After you start it, it will be sending stream of 0x55 bytes to initiate auto-baud calculation and entry into bootloader mode. When bootloader starts you should press any key and PC loader will start sending instructions to microcontroller.
