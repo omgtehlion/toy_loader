@@ -48,8 +48,8 @@ This command can consist of any number of erase ranges.
 Firmware
 --------
 
-This bootloader is stored in the last 1-24 bytes of Flash program memory space.
-This allows user application to handle interrupts at the normal hardware interrupt vector address and work without additional steps.
+This bootloader is stored in the last 1024 bytes of Flash program memory space.
+This allows user application to handle interrupts at the normal hardware interrupt vector addresses and work without additional modifications.
 User firmware must meet only following requirements:
 * it must start with `GOTO xxx` instruction (most of pic18 compilers do this by default);
 * it must not use last 1024 bytes of program memory;
