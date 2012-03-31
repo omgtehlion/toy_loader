@@ -6,7 +6,7 @@ Unlike other popular bootloaders it doesn’t require additional wires to work: 
 
 Sample Schematics
 -----------------
-![fig1](/omgtehlion/toy_loader/raw/f60cfae8c3397814f5be82e7f5c63eed6465afe4/schematic.png)
+![fig1](/omgtehlion/toy_loader/raw/fa6eef415a5dfff15b41536f0b1673228f04a55c/schematic.png)
 
 This bootloader requires TTL UART port (or USB-UART converter) plus simple schematics to provide power via the same wire.
 You can use any n-MOSFET or npn-BJT for Q1, for it acts as inverter. For Q2 choose p-MOSFET that can handle reasonable current. I use FDS8958A, which contains p- and n-MOSFETs.
